@@ -1,0 +1,22 @@
+{
+  "name": "practiceexercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "validParentheses1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dchilds05/practiceExercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dchilds05/practiceExercises/issues"
+  },
+  "homepage": "https://github.com/dchilds05/practiceExercises#readme",
+  "dependencies": {
+    "jest": "^27.1.1"
+  }
+}
