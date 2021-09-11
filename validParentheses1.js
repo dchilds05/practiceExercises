@@ -1,3 +1,5 @@
+//can do with a queue or a stack
+
 function validParenthesis (string) {
     let stackQueue = [];
     for (let i=0; i<string.length; i++){
