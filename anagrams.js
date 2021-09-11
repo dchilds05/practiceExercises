@@ -14,14 +14,13 @@ function anagramChecker(word1, word2){
 
     let formatted1 = removeSpecial(word1);
     let formatted2 = removeSpecial(word2);
-    let stack = formatted1;
 
     for(let i=0; i<formatted2.length; i++){
-        if(stack.includes(formatted2[i])) stack.splice(stack.indexOf(formatted2[i]), 1)
-        else stack.push(1);
+        if(formatted1.includes(formatted2[i])) formatted1.splice(formatted1.indexOf(formatted2[i]), 1)
+        else formatted1.push(1);
     }
 
-    if(!stack.length) return true;
+    if(!formatted1.length) return true;
     else return false;
 }
 
