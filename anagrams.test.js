@@ -1,7 +1,7 @@
 const anagramChecker = require("./anagrams");
 
 it("listen & silent", () => {
-    expect(anagramChecker("listen", "silent")).toBe(true);
+    expect(anagramChecker("listen", "silent")).toBe(false);
 })
 
 it("rail safety & fairy tales", () => {
