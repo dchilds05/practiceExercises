@@ -8,8 +8,7 @@ function anagramChecker(word1, word2){
         else formatted1.push(1);
     }
 
-    if(!formatted1.length) return true;
-    else return false;
+    return !formatted1.length;
 }
 
 
