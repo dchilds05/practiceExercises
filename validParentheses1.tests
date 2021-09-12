@@ -1,4 +1,4 @@
-/*const validParenthesis = require("./validParentheses1");
+const validParenthesis = require("./validParentheses1");
 
 it("Example 1", () => {
     expect(validParenthesis("()")).toBe(true);
@@ -19,4 +19,3 @@ it("Example 4", () => {
 it("Example 5", () => {
     expect(validParenthesis("{[]}")).toBe(true);
 })
-*/
