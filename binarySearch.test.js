@@ -23,10 +23,10 @@ it("nums = [-1,0,3,5,9,12]", () => {
     expect(binarySearch([-1,0,3,5,9,12], 9)).toBe(4);
 })
 
-it("nums = [-1,0,3,5,9,12]", () => {
-    expect(binarySearch([-1,0,3,5,9,12], 2)).toBe(-1);
+it("nums = [-2,1,4,6,10,13]", () => {
+    expect(binarySearch([-2,1,4,6,10,13], 2)).toBe(-1);
 })
 
-it("nums = [-1,0,3,5,9,12]", () => {
-    expect(binarySearch([-1,0,3,5,9,12], 12)).toBe(5);
+it("nums = [-3,-1,2,7,8,11]", () => {
+    expect(binarySearch([-3,-1,2,7,8,11], 11)).toBe(5);
 })

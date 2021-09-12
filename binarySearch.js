@@ -17,23 +17,17 @@ Note:
 3. The value of each element in nums will be in the range [-9999, 9999].
 */
 
-function binarySearch(arr, target){
-    console.log("arr: ", arr);
-    if(arr.length===1) return 0;
-    arr.sort();
-    let halfIndex = Math.ceil(arr.length/2);
-    console.log("halfIndex: ", halfIndex);
+function binarySearch(arr, target, start = 0, end = arr.length-1){
+
+    if(start > end) return -1;
+
+    let halfIndex = Math.floor((start+end)/2);
+
     if(arr[halfIndex] === target) return halfIndex;
-    else if (arr[halfIndex] < target) {
-        //RERUN WITH FIRST HALF
-        let newArr = (arr.splice(0 , halfIndex));
-        binarySearch(newArr, target);
-    }
-    else {
-        //RERUN WITH SECOND HALF
-        let newArr = (arr.splice(halfIndex-1 , arr.length - halfIndex + 1));
-        binarySearch(newArr, target);
-    }
+
+    if (arr[halfIndex] < target) return binarySearch(arr, target, halfIndex + 1, end);
+
+    else return binarySearch(arr, target, start, halfIndex - 1);
 }
 
 module.exports = binarySearch;
