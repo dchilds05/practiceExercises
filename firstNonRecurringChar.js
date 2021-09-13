@@ -25,11 +25,15 @@ function findFirst(str){
 //MORE ELEGANT SOLUTION
 
 function findFirst(str){
+
     for(let i = 0; i<str.length; i++){
         let char = str[i];
+
+        //IF CHAR EXISTS AT i AND THERE IS NO OCCURENCE OF CHAR STARTING AFTER i
         if( str.indexOf(char) == i && str.indexOf(char, i + 1) == -1 ) return char;
     }
     return null;
+
 }
 
 module.exports = findFirst;

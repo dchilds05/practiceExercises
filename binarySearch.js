@@ -19,14 +19,19 @@ Note:
 
 function binarySearch(arr, target, start = 0, end = arr.length-1){
 
+    // IF ARR IS EMPTY, RETURN -1
     if(start > end) return -1;
 
+    // FIND HALFWAY POINT TO CUT
     let halfIndex = Math.floor((start+end)/2);
 
+    //IF VALUE MATCHES, RETURN IT
     if(arr[halfIndex] === target) return halfIndex;
 
+    //IF VALUE IS TOO SMALL START SEARCH AGAIN, BUT IN THE SECOND HALF
     if (arr[halfIndex] < target) return binarySearch(arr, target, halfIndex + 1, end);
 
+    //IF VALUE IS TOO BIG START SEARCH AGAIN, BUT IN THE FIRST HALF
     else return binarySearch(arr, target, start, halfIndex - 1);
 }
 
