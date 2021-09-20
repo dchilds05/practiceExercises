@@ -26,20 +26,22 @@ for (el of hashmap) {
 */
 
 let hashmap = new Map([
-    [1,2],
-    [3,4],
-    [2,3],
-    [5,6],
-    [4,5]
+    [1,{previous: null, next: 2}],
+    [3,{previous: 5, next: 4}],
+    [2,{previous: 1, next: 5}],
+    [5,{previous: 2, next: 3}],
+    [4,{previous: 3, next: null}]
 ]);
 
-let head = 1;
+console.log("hashmap: ", hashmap);
 
+
+//let head = 1;
 
 //ADD NEW ITEM TO THE END OF THE LINKED LIST
-/*
+
 function addPair(head, key, value){
-    if(!hashmap.get(head)) {
+    if(!hashmap.get(head).next) {
         let tailKey = head;
         let tailVal = head + 1;
         hashmap.set(tailKey, tailVal);
@@ -52,7 +54,7 @@ function addPair(head, key, value){
 }
 
 addPair(5,6);
-*/
+
 
 // ITERATE THROUGH ALL OF THE ELEMENTS IN A LINKED LIST
 
@@ -126,4 +128,4 @@ insertAt(hashmap, 14, 5);
 
 
 
-console.log("hashmap: ", hashmap);
+
